@@ -4,26 +4,32 @@
         <meta charset="UTF-8">
         <title>Etch-a-Sketch</title>
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./css/hover-min.css"
         <script src="./script.js" defer></script>
     </head>
 
-    <body>
-        <h1>ETCH-A-SKETCH</h1>
+    <body onmousedown="return false" onselectstart="return false">
 
-        <div class="section2">
-            <div class="button" id="black"></div>
-            <div class="button" id="rgb"></div>
-            <div class="button" id="color"></div>
-            <div class="button" id="eraser"></div>
+        <div class="etchasketch">
+            <h1>MAGIC<span> Etch A Sketch </span>SCREEN</h1>
+
+            <div class="grid-container"></div>
+
+            <div class="selections">
+
+                <div class="clear"><span>CLEAR</span></div>
+
+                <div class="buttons">
+                    <div class="button hvr-grow" id="black">BLACK</div>
+                    <div class="button hvr-grow" id="rgb">RAINBOW</div>
+                    <div class="button hvr-grow" id="color">COLOR</div>
+                    <div class="button hvr-grow" id="eraser">ERASER</div>
+                </div>
+
+                <div class="grid-size"><span>SIZE</span></div>
+            </div>
+
         </div>
 
-        <div class="grid-container"></div>
-
-        <div class="section3">
-            <div class="clear"></div>
-            <div class="grid-size"></div>
-        </div>
-
-        <div id="footer"></div>
     </body>
 </html>
