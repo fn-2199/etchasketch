@@ -5,6 +5,7 @@ const clearBtn = document.querySelector('.clear');
 const colorBtn = document.querySelector('input');
 
 createDivs();
+const boxes = document.querySelectorAll('.box');
 
 buttons.forEach((button) => { button.addEventListener('click', activateButton)});
 clearBtn.addEventListener('click', clearButton);
@@ -47,7 +48,6 @@ function deactivateButtons() {
 }
 
 function clearButton() {
-    const boxes = document.querySelectorAll('.box');
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].style.background='';
     }
@@ -69,7 +69,6 @@ function sizeButton() {
 }
 
 function blackButton() {
-    const boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
             box.style.background = 'black';
@@ -78,7 +77,6 @@ function blackButton() {
 }
 
 function rgbButton() {
-    const boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
             box.style.background = generateRGB();
@@ -98,7 +96,6 @@ function colorButton() {
         newColor = e.target.value;
     })
 
-    const boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
             box.style.background = newColor;
@@ -107,7 +104,6 @@ function colorButton() {
 }
 
 function eraserButton() {
-    const boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
             box.style.background='';
