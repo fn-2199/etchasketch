@@ -25,7 +25,7 @@ function createDivs(size=16) {
 
 function activateButton() {
     deactivateButtons();
-    
+
     clickSound.currrentTime = 0;
     clickSound.play();
 
@@ -62,8 +62,6 @@ function clearButton() {
 }
 
 function sizeButton() {
-    clearButton();
-
     let size;
     while (!size) {
         size = parseInt(prompt('Input new size of grid. Must be an integer between 1 and 100.'));
@@ -73,7 +71,9 @@ function sizeButton() {
         }
     }
 
+    clearButton();
     createDivs(size);
+
 }
 
 function blackButton() {
