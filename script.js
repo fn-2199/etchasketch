@@ -3,6 +3,8 @@ const container = document.querySelector('.grid');
 const sizeBtn = document.querySelector('.size');
 const clearBtn = document.querySelector('.clear');
 const colorBtn = document.querySelector('input');
+const clickSound = document.getElementById('click-sound');
+const clearSound = document.getElementById('clear-sound');
 
 createDivs();
 const boxes = document.querySelectorAll('.box');
@@ -23,8 +25,11 @@ function createDivs(size=16) {
 
 function activateButton() {
     deactivateButtons();
-    this.classList.add('active-button');
+    
+    clickSound.currrentTime = 0;
+    clickSound.play();
 
+    this.classList.add('active-button');
     switch (this.id) {
         case 'black':
             blackButton();
@@ -48,6 +53,9 @@ function deactivateButtons() {
 }
 
 function clearButton() {
+    clearSound.currrentTime = 0;
+    clearSound.play();
+
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].style.background='';
     }
