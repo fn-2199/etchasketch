@@ -11,7 +11,7 @@ body {
 
 body,
 .clear,
-.grid-size {
+.size {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@ h1,
 
 .button,
 .clear,
-.grid-size {
+.size {
     cursor: pointer;
 }
 
@@ -63,17 +63,25 @@ h1 > span {
     justify-content: space-between;
     align-items: center;
     width: 950px;
-    font-weight: 600;
 }
 
 .buttons {
     display: flex;
     justify-content: space-evenly;
-    gap: 45px;
+    align-items: center;
+    gap: 50px;
+}
+
+.button {
+    transition: all .2s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1); 
 }
 
 .clear,
-.grid-size {
+.size {
     border-radius: 50%;
     background-color: white;
     width: 100px;
@@ -87,4 +95,17 @@ div > span {
 }
 div > span:hover {
     transform: rotate(360deg);
+}
+
+.active-button {
+    font-size: 35px;
+    text-shadow: #FC0 1px 0 10px;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Etch-a-Sketch</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./css/hover-min.css"
+        <link rel="stylesheet" href="./css/hover-min.css">
         <script src="./script.js" defer></script>
     </head>
 
@@ -13,22 +13,23 @@
         <div class="etchasketch">
             <h1>MAGIC<span> Etch A Sketch </span>SCREEN</h1>
 
-            <div class="grid-container"></div>
+            <div class="grid-container">
+                <div class="grid"></div>
+            </div>
 
             <div class="selections">
 
                 <div class="clear"><span>CLEAR</span></div>
 
                 <div class="buttons">
-                    <div class="button hvr-grow" id="black">BLACK</div>
-                    <div class="button hvr-grow" id="rgb">RAINBOW</div>
-                    <div class="button hvr-grow" id="color">COLOR</div>
-                    <div class="button hvr-grow" id="eraser">ERASER</div>
+                    <div class="button" id="black">BLACK</div>
+                    <div class="button" id="rgb">RAINBOW</div>
+                    <input type="color" class ="button" id="color" value="#000000">
+                    <div class="button" id="eraser">ERASER</div>
                 </div>
 
-                <div class="grid-size"><span>SIZE</span></div>
+                <div class="size"><span>SIZE</span></div>
             </div>
-
         </div>
 
     </body>
