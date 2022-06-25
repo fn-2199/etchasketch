@@ -9,9 +9,11 @@ const clearSound = document.getElementById('clear-sound');
 createDivs();
 const boxes = document.querySelectorAll('.box');
 
-buttons.forEach((button) => { button.addEventListener('click', activateButton)});
+buttons.forEach((button) => {button.addEventListener('click', activateButton)});
 clearBtn.addEventListener('click', clearButton);
 sizeBtn.addEventListener('click', sizeButton);
+
+// CREATES GRID
 
 function createDivs(size=16) {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -22,6 +24,8 @@ function createDivs(size=16) {
         container.appendChild(divElement).classList.add('box');
     }
 }
+
+// SWITCH MODE FUNCTIONS
 
 function activateButton() {
     deactivateButtons();
@@ -52,6 +56,8 @@ function deactivateButtons() {
     }
 }
 
+// CLEAR BUTTON
+
 function clearButton() {
     clearSound.currrentTime = 0;
     clearSound.play();
@@ -60,6 +66,8 @@ function clearButton() {
         boxes[i].style.background='';
     }
 }
+
+// SIZE BUTTON
 
 function sizeButton() {
     let size;
@@ -76,6 +84,8 @@ function sizeButton() {
 
 }
 
+// BLACK BUTTON
+
 function blackButton() {
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
@@ -83,6 +93,8 @@ function blackButton() {
         })
     })
 }
+
+// RGB BUTTON
 
 function rgbButton() {
     boxes.forEach(box => {
@@ -99,6 +111,8 @@ function generateRGB() {
     return `rgb(${R}, ${G}, ${B})`;
 }
 
+// CUSTOM COLOR BUTTON
+
 function colorButton() {
     colorBtn.addEventListener('change', (e) => {
         newColor = e.target.value;
@@ -110,6 +124,8 @@ function colorButton() {
         })
     })
 }
+
+// ERASER BUTTON
 
 function eraserButton() {
     boxes.forEach(box => {
